@@ -69,7 +69,6 @@ class News_model extends MY_Model
 			unset($data['cdate']);
 			$this->db->where('id',$this->input->post('news_id'))->update('news',$data);
 
-
 		}else{
 			$this->db->insert('news',$data);
 			$g_id = $this->db->insert_id();
