@@ -68,8 +68,8 @@
                     <label class="am-u-sm-2 am-form-label">状态</label>
                     <div class="am-u-sm-10">
                         <select name="flag">
-                            <option value="1">开启</option>
-                            <option value="-1">关闭</option>
+                            <option value="1"  {{if $detail}}{{if $detail.flag == 1}} selected {{/if}}{{/if}}>开启</option>
+                            <option value="-1"  {{if $detail}}{{if $detail.flag == -1}} selected {{/if}}{{/if}}>关闭</option>
                         </select>
                     </div>
                 </div>
