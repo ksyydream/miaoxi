@@ -58,16 +58,21 @@ class News_model extends MY_Model
 	}
 
 	public function save_news(){
+		$user_info = $this->session->userdata('user_info');
 		$data = array(
 			'title'=>$this->input->post('title'),
 			'logo'=>$this->input->post('logo'),
 			'content'=>$this->input->post('content'),
 			'flag'=>$this->input->post('flag'),
+			'create_uid'=>$user_info['id'],
 			'cdate'=>date('Y-m-d H:i:s',time())
 		);
 		$this->db->trans_start();//--------开始事务
 		if($this->input->post('news_id')){
 			unset($data['cdate']);
+			unset($data['create_uid']);
+			$data['modify_uid']=$user_info['id'];
+			$data['modify_date']=date('Y-m-d H:i:s',time());
 			$this->db->where('id',$this->input->post('news_id'))->update('news',$data);
 
 		}else{
