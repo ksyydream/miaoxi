@@ -62,6 +62,7 @@ class News_model extends MY_Model
 			'title'=>$this->input->post('title'),
 			'logo'=>$this->input->post('logo'),
 			'content'=>$this->input->post('content'),
+			'flag'=>$this->input->post('flag'),
 			'cdate'=>date('Y-m-d H:i:s',time())
 		);
 		$this->db->trans_start();//--------开始事务

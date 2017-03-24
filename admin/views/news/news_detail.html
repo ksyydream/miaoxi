@@ -58,9 +58,20 @@
                         <input required type="text" id="title" name="title" value="{{$detail.title|default:''}}">
                     </div>
                 </div>
+                <div class="am-form-group">
                 <div class="editor-box">
                     <input type="hidden" name="content" id="content" />
                     <script id="editor" type="text/plain" style="width: 100%;height:500px;">{{$detail.content|default:''}}</script>
+                </div>
+                </div>
+                <div class="am-form-group">
+                    <label class="am-u-sm-2 am-form-label">状态</label>
+                    <div class="am-u-sm-10">
+                        <select name="flag">
+                            <option value="1">开启</option>
+                            <option value="-1">关闭</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="am-form-group">
                     <div class="am-u-sm-9 am-u-sm-push-3">
