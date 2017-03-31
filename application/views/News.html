@@ -30,7 +30,7 @@
 			</div>
 			<div class="about-rightforNews">
 				<div class="company show">
-					{{foreach from=$news_list item=item}}
+					{{foreach from=$list item=item}}
 					<div class="border">
 						<div class="newsLeft">
 							<img src="/upload/news_logo/{{$item.logo}}" alt="">
@@ -38,7 +38,7 @@
 						<div class="newsRight">
 							<h4><span class="title overflow">{{$item.title}}</span><span class="time">{{$item.cdate}}</span></h4>
 							<p>{{$item.content|strip_tags|strip|default:$item.title|truncate:70:"...":true}}</p>
-							<a href="newsDetails.html"><img src="/index_statics/img/more.png" alt="" class="more"></a>
+							<a href="/news/news_detail/{{$item.id}}"><img src="/index_statics/img/more.png" alt="" class="more"></a>
 						</div>
 					</div>
 					{{/foreach}}
