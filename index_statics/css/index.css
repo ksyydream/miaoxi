@@ -1,0 +1,240 @@
+body {
+  min-width: 980px;
+  background-color: #fff;
+}
+.swiper-container {
+  width: 100%;
+  height: auto;
+  min-width: 1000px;
+}
+.swiper-container img {
+  width: 100%;
+}
+.swiper-pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background: #555;
+  margin: 0 10px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+.industry img {
+  display: block;
+  margin: 0 auto;
+}
+.industry .title {
+  margin-top: -45px;
+  font-size: 24px;
+  text-align: center;
+  color: #404040;
+}
+.industry .english {
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: #404040;
+  font-family: 'Arial';
+}
+.companyImg {
+  margin-top: 114px;
+}
+.top img {
+  vertical-align: middle;
+}
+.top .clear {
+  margin-left: 20px;
+  width: 588px;
+  height: 450px;
+}
+.top .sanjiao {
+  margin-left: -50px;
+}
+.top p {
+  margin-left: -140px;
+  display: inline-block;
+  color: #fff;
+  font-size: 40px;
+  vertical-align: middle;
+}
+.center {
+  margin-top: 58px;
+}
+.center img {
+  vertical-align: middle;
+}
+.center .sanjiao {
+  margin-left: 180px;
+  position: relative;
+  z-index: 2;
+}
+.center p {
+  margin-left: -180px;
+  display: inline-block;
+  font-size: 40px;
+  font-family: 'Arial';
+  color: #fff;
+  vertical-align: middle;
+  position: relative;
+  z-index: 5;
+}
+.center .app {
+  margin-left: 40px;
+  position: relative;
+  z-index: 1;
+}
+.c-srtong {
+  margin-top: 100px;
+  min-width: 1000px;
+  background-color: #f6f6f6;
+}
+.profile {
+  margin: 115px auto 0px auto;
+  height: 928px;
+  width: 980px;
+}
+.profile-left {
+  float: left;
+  width: 490px;
+}
+.profile-left .profile-list {
+  display: inline-block;
+  width: 490px;
+  height: 260px;
+  margin-top: 117px;
+  background-color: #fff;
+}
+.profile-left .profile-list h3 {
+  font-size: 18px;
+  color: #404040;
+  line-height: 60px;
+  margin: 30px auto auto 50px;
+}
+.profile-left .profile-list p {
+  font-size: 14px;
+  color: #404040;
+  line-height: 22px;
+  text-indent: 2em;
+  padding: 0 45px;
+}
+.profile-left .profile-list img {
+  margin: 30px auto auto 380px;
+}
+.profile-left .imgBig {
+  width: 490px;
+  height: 260px;
+  background-color: #fff;
+}
+.profile-right {
+  float: left;
+  width: 490px;
+}
+.profile-right .profile-list {
+  display: inline-block;
+  width: 490px;
+  height: 260px;
+  background-color: #fff;
+  margin-top: 190px;
+}
+.profile-right .profile-list h3 {
+  font-size: 18px;
+  color: #404040;
+  line-height: 60px;
+  margin: 30px auto auto 50px;
+}
+.profile-right .profile-list p {
+  font-size: 14px;
+  color: #404040;
+  line-height: 22px;
+  text-indent: 2em;
+  padding: 0 45px;
+}
+.profile-right .profile-list img {
+  margin: 50px auto auto 380px;
+}
+.profile-right .imgBig {
+  margin-top: 117px;
+  width: 490px;
+  height: 260px;
+  background-color: #fff;
+}
+.news {
+  width: 980px;
+  padding: 0 10px;
+  margin: 115px auto 100px auto;
+  overflow: hidden;
+}
+.news .swiper-slide .slideItems {
+  width: 284px;
+  height: 205px;
+}
+.news .swiper-slide img {
+  width: 282px;
+  height: 207px;
+  margin: 0 auto;
+  display: block;
+}
+.news .swiper-slide h4 {
+  margin: 14px auto 12px 0px;
+  font-size: 14px;
+  color: #404040;
+  margin-left: 20px;
+}
+.news .swiper-slide p {
+  height: 70px;
+  width: 284px;
+  font-size: 12px;
+  color: #676767;
+  line-height: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-indent: 2em;
+}
+.news .swiper-slide .more {
+  width: 60px;
+  height: 20px;
+  margin-left: 20px;
+}
+.bggray {
+  background: #f6f6f6;
+  min-width: 1000px;
+}
+.icon-f {
+  clear: both;
+  width: 980px;
+  height: 210px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 114px;
+}
+.icon-f .iconlist {
+  width: 24.5%;
+  height: 210px;
+  display: inline-block;
+  text-align: center;
+}
+.icon-f .iconlist img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.icon-f .iconlist span {
+  font-size: 14px;
+  color: #404040;
+}

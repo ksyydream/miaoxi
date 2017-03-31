@@ -1,0 +1,129 @@
+header {
+  height: 155px;
+  background-color: #fff;
+  z-index: 888;
+}
+.header-top {
+  height: 100px;
+  width: 100%;
+  min-width: 1000px;
+  background-color: #fff;
+}
+.header-top div {
+  width: 1000px;
+  margin: 0 auto;
+}
+.header-top img {
+  vertical-align: middle;
+  line-height: 100px;
+  padding-left: 20px;
+}
+.header-top h3 {
+  display: inline-block;
+  margin-left: 16px;
+  font-size: 28px;
+  color: #010c16;
+  line-height: 100px;
+  vertical-align: middle;
+}
+.header-bottom {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  min-width: 1000px;
+  background-color: #010101;
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+  filter: "alpha(opacity=80)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  opacity: 0.8;
+  z-index: 888;
+}
+.ulBox {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  height: 55px;
+  z-index: 889;
+}
+.listItems {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  height: 55px;
+  width: 980px;
+  font-size: 18px;
+  text-align: center;
+}
+.listItems li {
+  float: left;
+  width: 90px;
+  margin: 0 35px;
+}
+.listItems a {
+  display: inline-block;
+  width: 90px;
+  height: 55px;
+  font-size: 18px;
+  line-height: 55px;
+  color: #fff;
+  clear: both;
+  text-decoration: none;
+}
+.listItems .ItemsActive,
+.listItems li:hover {
+  border-top: 10px solid #1b96fe;
+}
+.listItems .ItemsActive a,
+.listItems li:hover a {
+  color: #1b96fe;
+  line-height: 35px;
+  height: 45px;
+}
+.footer {
+  width: 100%;
+  height: 350px;
+  min-width: 1000px;
+  clear: both;
+  background-color: #030303;
+}
+.footer .footerList {
+  width: 980px;
+  margin: 0 auto 0 auto;
+  padding-top: 56px;
+  color: #fff;
+  text-align: center;
+}
+.footer .footerList li {
+  font-size: 17px;
+  float: left;
+  text-align: center;
+  width: 160px;
+}
+.footer .footerList a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .qr_code {
+  clear: both;
+  width: 980px;
+  margin: 0 auto 55px auto;
+  padding-top: 22px;
+}
+.footer .weiChart {
+  margin-left: 665px;
+}
+.footer .APP {
+  margin-left: 50px;
+}
+.footer address,
+.footer .beian {
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+}
