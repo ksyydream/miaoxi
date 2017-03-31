@@ -19,7 +19,7 @@ class News_model extends MY_Model
         return $this->db->get()->result_array();;
     }
 
-    public function ist(){
+    public function get_list(){
         $this->db->select('*');
         $this->db->from('news');
         $this->db->where('flag',1);

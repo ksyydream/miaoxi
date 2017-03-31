@@ -24,7 +24,7 @@ class News extends MY_Controller {
 
 	public function index()
 	{
-		$list = $this->news_model->list();
+		$list = $this->news_model->get_list();
 		$this->assign('list',$list);//url路径
 		$this->display('News.html');
 	}
