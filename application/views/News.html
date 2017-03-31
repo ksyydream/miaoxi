@@ -30,16 +30,18 @@
 			</div>
 			<div class="about-rightforNews">
 				<div class="company show">
+					{{foreach from=$news_list item=item}}
 					<div class="border">
 						<div class="newsLeft">
-							<img src="/index_statics/img/picture2.png" alt="">
+							<img src="/upload/news_logo/{{$item.logo}}" alt="">
 						</div>
 						<div class="newsRight">
-							<h4><span class="title overflow">拉拉秀生态平台正式开启</span><span class="time">2015-01-10</span></h4>
-							<p>拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启</p>
+							<h4><span class="title overflow">{{$item.title}}</span><span class="time">{{$item.cdate}}</span></h4>
+							<p>{{$item.content|strip_tags|strip|default:$item.title|truncate:70:"...":true}}</p>
 							<a href="newsDetails.html"><img src="/index_statics/img/more.png" alt="" class="more"></a>
 						</div>
 					</div>
+					{{/foreach}}
 				</div>
 				<div class="guild show">
 					<div class="border">
