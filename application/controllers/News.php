@@ -19,11 +19,18 @@ class News extends MY_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('news_model');
 	}
 
 	public function index()
 	{
 		$this->display('News.html');
+	}
+
+	public function news_detail($id=null){
+		$detail = $this->news_model->get_detail($id);
+		$this->assign('detail',$detail);//url路径
+		$this->display('newsDetails.html');
 	}
 
 

@@ -26,7 +26,7 @@ class Main extends MY_Controller {
 	{
 		$news_list = $this->news_model->main_new_list();
 		//die(var_dump($news_list));
-		$this->cismarty->assign('news_list',$news_list);//url路径
+		$this->assign('news_list',$news_list);//url路径
 		$this->display('index.html');
 	}
 

@@ -97,7 +97,7 @@
 					<img src="/upload/news_logo/{{$item.logo}}" alt="" class="slideItems">
 					<h4 class="overflow">{{$item.title}}</h4>
 					<p>{{$item.content|strip_tags|strip|default:$item.title|truncate:60:"...":true}}</p>
-					<a href="newsDetails.html"><img src="/index_statics/img/more.png" alt="" class="more"></a>
+					<a href="/news/news_detail/{{$item.id}}"><img src="/index_statics/img/more.png" alt="" class="more"></a>
 				</div>
 				{{/foreach}}
 
