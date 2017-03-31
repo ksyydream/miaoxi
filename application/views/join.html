@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>招商加盟</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta name="description" content=""/>
+	<meta name="keywords" content="">
+	<link rel="icon" href="/index_statics/img/icon.png">
+	<link rel="stylesheet" href="/index_statics/css/reset.css">
+	<link rel="stylesheet" href="/index_statics/css/head-footer.css">
+	<link rel="stylesheet" href="/index_statics/css/aboutmaxi.css">
+</head>
+<body ondragstart="return false">
+	<!-- 头部文件 -->
+	<!--<script src="/index_statics/js/head.js"></script>-->
+	{{include file='head.html'}}
+	<!-- 正文 -->
+	<div class="banner">
+		<img src="/index_statics/img/bannerJoin.png" alt="">
+	</div>
+	<div class="container">
+		<p class="addr">当前位置：招商加盟>行业优势</p>
+		<h1>招商加盟<span>Join Us</span></h1>
+		<div class="about">
+			<div class="about-left">
+				<div class="leftItems leftActive" id="contactDefault">行业优势</div>
+				<div class="leftItems" id="require">资质要求</div>
+			</div>
+			<div class="about-rightforContact">
+				<div class="contactDefault show">
+					<img src="/index_statics/img/pictureJoin.png" alt="">
+					<div class="joinMsg">
+						<span>我们的优势：</span>
+						<p>1、更庞大的市场（提供营销平台、线上线下流量互补 ）</p>
+						<p>2、更精准的营销 （用户数据深度解析）</p>
+						<p>3、更真实的圈子（搭建无线网络基于位置的精准推送 ）</p>
+						<p>4、更具粘性的会员（打通线上线下会员体系） </p>
+						<p>5、更贴心的服务 （录入商家信息、专业团队大数据分析）</p>
+						<p>6、更全面的展示（搭载新媒体传播（视频播放器、会员直播间））</p>
+						<p>7、更忠诚的顾客（植入秀理念，实现会员、商家互动）</p>
+						<p>8、更稳定的员工（提高员工福利、积极性提高）</p>
+					</div>
+				</div>
+				<div class="require show">
+					<img src="/index_statics/img/pictureforZ.png" alt="">
+					<div class="joinMsg">
+						<span>特约商家：</span>
+						<p>条件：提供有盖章的单位资质证明复印件，保证服务合格，商品安全。</p>
+						<p>服务：发布门店团购折扣信息，并为用户提供其优惠信息及商品展示，提供拉拉秀平台，供其发布门店团购信息以及商品展示。</p>
+						<span>联盟商家：</span>
+						<p>条件：提供有盖章的单位资质证明复印件，保证服务合格，商品安全</p>
+						<p>服务：提供互联网技术能力，系统平台的技术支持，协助在拉拉秀体系内建立完整的会员合伙人服务的网络体系；通过平台给联盟商家吸引新客户。为其策划、培训并执行会员系统的营销方案，并提供软件开发，免费提供平台用户资源和淼溪家用生态净水器。
+							品牌如人，人如品牌。如果一个人连独特的个性、主张都表达不出来，那么这个人很难被他人识别。品牌也如此。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 尾部文件 -->
+	<!--<script src="/index_statics/js/footer.js"></script>-->
+	{{include file='footer.html'}}
+	</body>
+ <!-- build:js /index_statics/js/jquery.js -->
+<script src="/index_statics/lib/js/jquery.min.js"></script>
+<!-- endbuild -->
+	<script>
+		(function(){
+			$(".listItems li").eq(5).addClass("ItemsActive");
+			$(".leftItems").click(function() {
+				$(".leftItems").removeClass("leftActive");
+				$(this).addClass("leftActive");
+				$(".addr").html("当前位置：招商加盟>"+$(this).html());
+				$(".show").hide();
+				$("."+$(this).attr("id")).show();
+			})
+		})();
+	</script>  
+</script>
+</html>

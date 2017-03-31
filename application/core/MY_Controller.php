@@ -17,9 +17,6 @@ class MY_Controller extends CI_Controller
 		parent::__construct();
 		ini_set('date.timezone','Asia/Shanghai');
 		$this->cismarty->assign('base_url',base_url());//url路径
-		$this->cismarty->assign('header_name','');//初始化标题
-		$this->cismarty->assign('footer_flag','');//初始化
-		$this->load->model('sys_model');
 //		if ( strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false ) {
 //			if(!$this->session->userdata('openid')){
 //				$appid="wxa6a2f25241f8bc87";

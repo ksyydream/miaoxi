@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>联系我们</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta name="description" content=""/>
+	<meta name="keywords" content="">
+	<link rel="icon" href="/index_statics/img/icon.png">
+	<link rel="stylesheet" href="/index_statics/css/reset.css">
+	<link rel="stylesheet" href="/index_statics/css/head-footer.css">
+	<link rel="stylesheet" href="/index_statics/css/aboutmaxi.css">
+</head>
+<body ondragstart="return false">
+	<!-- 头部文件 -->
+	<!--<script src="/index_statics/js/head.js"></script>-->
+	{{include file='head.html'}}
+	<!-- 正文 -->
+	<div class="banner">
+		<img src="/index_statics/img/bannerContact.png" alt="">
+	</div>
+	<div class="container">
+		<p class="addr">当前位置：联系我们</p>
+		<h1>联系我们<span>Contact Us</span></h1>
+		<div class="about">
+			<div class="about-left">
+				<div class="leftItems leftActive" id="default">联系我们</div>
+				<div class="leftItems" id="clickcotact">留言反馈</div>
+			</div>
+			<div class="about-rightforContact">
+				<div class="default show">
+					<img src="/index_statics/img/pictureContact.png" alt="">
+					<div class="contactMsg">
+						<p>公司名称：淼溪信息科技发展(上海)有限公司</p>
+						<p>公司地址：上海市嘉定区金沙江西路1555弄395号</p>
+						<p>邮编：201800</p>
+						<p>电话：021-69133888</p>
+						<p>联系QQ：1174738585</p>
+						<p>邮箱：loveshow2016@163.com</p>
+						<p>官网：www.loveshowonline.com</p>
+						<p>客服电话：400-7731377</p>
+					</div>
+				</div>
+				<div class="clickcotact show">
+					<img src="/index_statics/img/liuyanfankui.png" alt="">
+					<form name="form" method="post" action="#">
+						<textarea name="" id="" cols="30" rows="10" placeholder="请输入留言(400字之内).." maxlength="400"></textarea>
+						<input type="submit" name="submit" value="提交"class="send" >
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部文件 -->
+	<!--<script src="/index_statics/js/footer.js"></script>-->
+	{{include file='footer.html'}}
+</body>
+ <!-- build:js /index_statics/js/jquery.js -->
+<script src="/index_statics/lib/js/jquery.min.js"></script>
+<!-- endbuild -->
+<script>
+	(function(){
+		$(".listItems li").eq(4).addClass("ItemsActive");
+		$(".leftItems").click(function() {
+			$(".leftItems").removeClass("leftActive");
+			$(this).addClass("leftActive");
+			$(".addr").html("当前位置：联系我们>"+$(this).html());
+			$(".show").hide();
+			$("."+$(this).attr("id")).show();
+		})
+	})();
+</script>  
+</script>
+</html>

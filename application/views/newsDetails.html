@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>新闻资讯_详情</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta name="description" content=""/>
+	<meta name="keywords" content="">
+	<link rel="icon" href="/index_statics/img/icon.png">
+	<link rel="stylesheet" href="/index_statics/css/reset.css">
+	<link rel="stylesheet" href="/index_statics/css/head-footer.css">
+	<link rel="stylesheet" href="/index_statics/css/aboutmaxi.css">
+</head>
+<body ondragstart="return false">
+	<!-- 头部文件 -->
+	<!--<script src="/index_statics/js/head.js"></script>-->
+	{{include file='head.html'}}
+	<!-- 正文 -->
+	<div class="banner">
+		<img src="/index_statics/img/bannerNews.png" alt="">
+	</div>
+	<div class="container">
+		<p class="addr">当前位置：新闻资讯>公司新闻>更多</p>
+		<div class="details">
+			<h3>拉拉秀生态平台正式开启</h3>
+			<p class="times"><span>发布时间:</span><span>2015-08-10</span></p>
+			<img src="" alt="图片">
+			<p class="details-context">
+				拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启拉拉秀生态平台正式开启
+			</p>
+		</div>
+	</div>
+	<!-- 尾部文件 -->
+	<!--<script src="/index_statics/js/footer.js"></script>-->
+	{{include file='footer.html'}}
+</body>
+ <!-- build:js /index_statics/js/jquery.js -->
+<script src="/index_statics/lib/js/jquery.min.js"></script>
+<!-- endbuild -->
+<script>
+	(function(){
+		$(".listItems li").eq(3).addClass("ItemsActive");
+		$(".leftItems").click(function() {
+			$(".leftItems").removeClass("leftActive");
+			$(this).addClass("leftActive");
+			$(".addr").html("当前位置：新闻资讯>"+$(this).html());
+			$(".show").hide();
+			$("."+$(this).attr("id")).show();
+		})
+	})();
+</script>  
+</script>
+</html>
