@@ -26,4 +26,8 @@ class AboutMaxi extends MY_Controller {
 		$this->display('aboutMaxi.html');
 	}
 
+	public function personDetails($id=null){
+		$this->display('personDetails.html');
+	}
+
 }
