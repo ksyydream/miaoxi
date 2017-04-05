@@ -22,9 +22,11 @@ class News extends MY_Controller {
 		$this->load->model('news_model');
 	}
 
-	public function index()
+	public function index($class=1,$page=1)
 	{
-		$list = $this->news_model->get_list();
+		$list = $this->news_model->get_list($page,$class);
+		$pager = $this->pagination->getPageLink_by4('/news/index/'.$class, $list['total'], $list['limit']);
+		$this->assign('pager', $pager);
 		$this->assign('list',$list);//url路径
 		$this->display('News.html');
 	}

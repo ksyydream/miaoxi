@@ -55,6 +55,15 @@
                 </div>
                 </div>
                 <div class="am-form-group">
+                    <label class="am-u-sm-2 am-form-label">类别</label>
+                    <div class="am-u-sm-10">
+                        <select name="class">
+                            <option value="1"  {{if isset($detail)}}{{if $detail.class == 1}} selected {{/if}}{{/if}}>公司新闻</option>
+                            <option value="2"  {{if isset($detail)}}{{if $detail.class == 2}} selected {{/if}}{{/if}}>行业资讯</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="am-form-group">
                     <label class="am-u-sm-2 am-form-label">状态</label>
                     <div class="am-u-sm-10">
                         <select name="flag">

@@ -21,16 +21,18 @@
 		<img src="/index_statics/img/bannerNews.png" alt="">
 	</div>
 	<div class="container">
-		<p class="addr">当前位置：新闻资讯>公司新闻</p>
+		<p class="addr">当前位置：新闻资讯>
+			{{if $list.class == 1}}公司新闻{{/if}}
+			{{if $list.class == 2}}行业资讯{{/if}}</p>
 		<h1>公司产业<span>INDUCTRY</span></h1>
 		<div class="about">
 			<div class="about-left">
-				<div class="leftItems leftActive" id="company">公司新闻</div>
-				<div class="leftItems" id="guild">行业资讯</div>
+				<div class="leftItems {{if $list.class == 1}}leftActive{{/if}}" id="company">公司新闻</div>
+				<div class="leftItems {{if $list.class == 2}}leftActive{{/if}}" id="guild">行业资讯</div>
 			</div>
 			<div class="about-rightforNews">
 				<div class="company show">
-					{{foreach from=$list item=item}}
+					{{foreach from=$list.list item=item}}
 					<div class="border">
 						<div class="newsLeft">
 							<img src="/upload/news_logo/{{$item.logo}}" alt="">
@@ -42,8 +44,11 @@
 						</div>
 					</div>
 					{{/foreach}}
+					<div class="am-cf">
+						{{$pager}}
+					</div>
 				</div>
-				<div class="guild show">
+				<!--<div class="guild show">
 					<div class="border">
 						<div class="newsLeft">
 							<img src="/index_statics/img/picture2.png" alt="">
@@ -54,7 +59,7 @@
 							<a href="newsDetails.html"><img src="/index_statics/img/more.png" alt="" class="more"></a>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				
 			</div>
 		</div>
@@ -68,15 +73,22 @@
 <!-- endbuild -->
 <script>
 	(function(){
-		$(".listItems li").eq(3).addClass("ItemsActive");
+		/*$(".listItems li").eq(3).addClass("ItemsActive");
 		$(".leftItems").click(function() {
 			$(".leftItems").removeClass("leftActive");
 			$(this).addClass("leftActive");
 			$(".addr").html("当前位置：新闻资讯>"+$(this).html());
 			$(".show").hide();
 			$("."+$(this).attr("id")).show();
+		})*/
+
+		$("#company").click(function() {
+			window.location.href="/news/index/1/1";
+		})
+
+		$("#guild").click(function() {
+			window.location.href="/news/index/2/1";
 		})
 	})();
-</script>  
 </script>
 </html>

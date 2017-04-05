@@ -20,6 +20,11 @@
                     <option value="1" {{if $data.flag == 1}} selected="selected" {{/if}} >开启</option>
                     <option value="-1" {{if $data.flag == -1}} selected="selected" {{/if}} >关闭</option>
                 </select>
+                    <select style="width: 200px;height: 40px;" name="class">
+                        <option value="">全部</option>
+                        <option value="1" {{if $data.class == 1}} selected="selected" {{/if}} >公司新闻</option>
+                        <option value="2" {{if $data.class == 2}} selected="selected" {{/if}} >行业资讯</option>
+                    </select>
                 </div>
                 <div class="am-input-group am-input-group-sm" style="margin-top: 15px;">
                    创建时间:
@@ -44,6 +49,7 @@
                     <th>编码</th>
                     <th>标题</th>
                     <th>创建时间</th>
+                    <th>类别</th>
                     <th>状态</th>
                     <th>操作</th>
                 </tr>
@@ -54,6 +60,10 @@
                     <td>{{$item.id}}</td>
                     <td><a>{{$item.title}}</a></td>
                     <td><a>{{$item.cdate}}</a></td>
+                    <td><a>
+                        {{if $item.class == 1}}公司新闻{{/if}}
+                        {{if $item.class == 2}}行业资讯{{/if}}
+                    </a></td>
                     <td><a>
                         {{if $item.flag == 1}}开启{{/if}}
                         {{if $item.flag == -1}}关闭{{/if}}
