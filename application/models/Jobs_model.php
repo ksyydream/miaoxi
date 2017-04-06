@@ -11,7 +11,7 @@ class Jobs_model extends MY_Model
     }
 
     public function get_list($page){
-        $page_limit = 1;
+        $page_limit = 15;
         $this->db->select('count(1) num')->from('job a');
         $this->db->where('a.flag',1);
         $num = $this->db->get()->row();

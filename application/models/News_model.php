@@ -20,7 +20,7 @@ class News_model extends MY_Model
     }
 
     public function get_list($page,$class){
-        $page_limit = 1;
+        $page_limit = 8;
         $this->db->select('count(1) num')->from('news a');
         $this->db->where('a.flag',1);
         $this->db->where('a.class',$class);
