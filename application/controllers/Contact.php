@@ -19,11 +19,21 @@ class Contact extends MY_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('contact_model');
 	}
 
 	public function index()
 	{
 		$this->display('contact.html');
+	}
+
+	public function save_message(){
+		if(!$this->input->post('content')){
+			$this->show_message('留言不能为空');
+		}
+		$this->contact_model->save_message();
+		$this->show_message('保存成功!',site_url('contact/index'));
+		//$this->display('contact.html');
 	}
 
 

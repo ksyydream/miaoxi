@@ -44,9 +44,9 @@
 				</div>
 				<div class="clickcotact show">
 					<img src="/index_statics/img/liuyanfankui.png" alt="">
-					<form name="form" method="post" action="#">
-						<textarea name="" id="" cols="30" rows="10" placeholder="请输入留言(400字之内).." maxlength="400"></textarea>
-						<input type="submit" name="submit" value="提交"class="send" >
+					<form id="save_form"  method="post" action="{{site_url url='contact/save_message'}}">
+						<textarea name="content" id="content" cols="30" rows="10" placeholder="请输入留言(400字之内).." maxlength="400"></textarea>
+						<input id="save_btn" type="button" value="提交" class="send" >
 					</form>
 				</div>
 			</div>
@@ -58,6 +58,7 @@
 </body>
  <!-- build:js /index_statics/js/jquery.js -->
 <script src="/index_statics/lib/js/jquery.min.js"></script>
+<script type="text/javascript" src="/statics/js/layer/layer.js"></script>
 <!-- endbuild -->
 <script>
 	(function(){
@@ -68,6 +69,15 @@
 			$(".addr").html("当前位置：联系我们>"+$(this).html());
 			$(".show").hide();
 			$("."+$(this).attr("id")).show();
+		})
+
+		$("#save_btn").click(function(){
+			var content = $('#content').val();
+			if(content.trim() == ''){
+				layer.msg('留言不可为空!', {icon: 2});
+			}else{
+				$("#save_form").submit();
+			}
 		})
 	})();
 </script>  
