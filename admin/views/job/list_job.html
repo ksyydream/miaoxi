@@ -9,7 +9,7 @@
 
     <div class="am-g">
 
-        <form method="post" action="{{site_url url='AboutMaxi/list_job'}}/1" class="search_form">
+        <form method="post" action="{{site_url url='Jobs/list_job'}}/1" class="search_form">
 
             <div class="am-u-sm-12 am-u-md-8">
                 <div class="am-input-group am-input-group-sm">
@@ -29,7 +29,7 @@
                            onfocus="WdatePicker({isShowClear:true,readOnly:true,dateFmt:'yyyy-MM-dd'})">
                     <span class="am-input-group-btn" style="float: right;">
                          <input style="height: 40px;" type="submit" class="am-btn am-btn-default" value="搜索"/>
-                        <a style="margin-left: 10px;height: 40px;" href="{{site_url url='AboutMaxi/add_job'}}" class="am-btn am-btn-primary">新增</a>
+                        <a style="margin-left: 10px;height: 40px;" href="{{site_url url='Jobs/add_job'}}" class="am-btn am-btn-primary">新增</a>
                     </span>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     </a></td>
                     <td><div class="am-btn-toolbar">
                         <div class="am-btn-group am-btn-group-xs">
-                            <a type="button" class="am-btn am-btn-danger" href="{{site_url url='AboutMaxi/add_job'}}/{{$item.id}}/{{$page}}">
+                            <a type="button" class="am-btn am-btn-danger" href="{{site_url url='Jobs/add_job'}}/{{$item.id}}/{{$page}}">
                                 <span class="am-icon-pencil-square-o"></span> 详情
                             </a>
                         </div>

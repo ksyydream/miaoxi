@@ -93,7 +93,6 @@ class Job_model extends MY_Model
         }
     }
 
-
     public function get_job_detail($id){
         $this->db->select('a.*')->from('job a');
         $this->db->where('a.id',$id);

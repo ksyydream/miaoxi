@@ -1,17 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class AboutMaxi extends MY_Controller {
+class Jobs extends MY_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('aboutmaxi_model');
-		$this->load->library('image_lib');
-		$this->load->helper('directory');
+		$this->load->model('job_model');
 	}
 
 	public function list_job($page=1){
-		$data = $this->aboutmaxi_model->list_job($page);
+		$data = $this->job_model->list_job($page);
 		$base_url = "/admin.php/AboutMaxi/list_job/";
 		$pager = $this->pagination->getPageLink($base_url, $data['total'], $data['limit']);
 		$this->assign('pager', $pager);
@@ -20,7 +18,7 @@ class AboutMaxi extends MY_Controller {
 		$this->show('job/list_job');
 	}
 
-	/*public function upload_image(){
+	public function upload_image(){
 		$dir = FCPATH . '/upload/news_logo';
 		if(!is_dir($dir)){
 			mkdir($dir,0777,true);
@@ -37,25 +35,28 @@ class AboutMaxi extends MY_Controller {
 			$pic_arr = $this->upload->data();
 			echo $pic_arr['file_name'];
 		}
-	}*/
+	}
 
-	public function save_job(){
+	public function save_news(){
 		if(!$this->input->post('title')){
 			$this->show_message('新闻标题不能为空!');
 		}
-		$rs =$this->aboutmaxi_model->save_job();
+		if(!$this->input->post('logo')){
+			$this->show_message('新闻logo不能为空!');
+		}
+		$rs =$this->news_model->save_news();
 		if($rs == 1){
-			$this->show_message('保存成功',site_url('AboutMaxi/list_job'));
+			$this->show_message('保存成功',site_url('news/list_news'));
 		}else{
 			$this->show_message('保存失败');
 		}
 	}
-	public function add_job($id=null,$page=1){
+	public function add_news($id=null,$page=1){
 		$this->assign('page', $page);
 		if($id){
-			$detail = $this->aboutmaxi_model->get_job_detail($id);
+			$detail = $this->news_model->get_new_detail($id);
 			$this->assign('detail', $detail);
 		}
-		$this->show('job/job_detail');
+		$this->show('news/news_detail');
 	}
 }
