@@ -2,7 +2,7 @@
 if (! defined('BASEPATH'))
 	exit('No direct script access allowed');
 
-class AboutMaxi_model extends MY_Model
+class Aboutmaxi_model extends MY_Model
 {
 
 	public function __construct ()
@@ -12,7 +12,8 @@ class AboutMaxi_model extends MY_Model
 	public function list_job($page=1){
 		$search_date = 'create_time';
 		$data['limit'] = $this->limit;
-		//获取总记录数
+		//获取总记录数 123
+
 		$this->db->select('count(1) num')->from('job a');
 		if($this->input->post('keyword')){
 			$this->db->like('a.title',$this->input->post('keyword'));
