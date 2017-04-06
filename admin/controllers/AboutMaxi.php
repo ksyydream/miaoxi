@@ -5,13 +5,13 @@ class AboutMaxi extends MY_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('aboutMaxi_model');
+		$this->load->model('aboutmaxi_model');
 		$this->load->library('image_lib');
 		$this->load->helper('directory');
 	}
 
 	public function list_job($page=1){
-		$data = $this->aboutMaxi_model->list_job($page);
+		$data = $this->aboutmaxi_model->list_job($page);
 		$base_url = "/admin.php/AboutMaxi/list_job/";
 		$pager = $this->pagination->getPageLink($base_url, $data['total'], $data['limit']);
 		$this->assign('pager', $pager);
@@ -43,7 +43,7 @@ class AboutMaxi extends MY_Controller {
 		if(!$this->input->post('title')){
 			$this->show_message('新闻标题不能为空!');
 		}
-		$rs =$this->aboutMaxi_model->save_job();
+		$rs =$this->aboutmaxi_model->save_job();
 		if($rs == 1){
 			$this->show_message('保存成功',site_url('AboutMaxi/list_job'));
 		}else{
@@ -53,7 +53,7 @@ class AboutMaxi extends MY_Controller {
 	public function add_job($id=null,$page=1){
 		$this->assign('page', $page);
 		if($id){
-			$detail = $this->aboutMaxi_model->get_job_detail($id);
+			$detail = $this->aboutmaxi_model->get_job_detail($id);
 			$this->assign('detail', $detail);
 		}
 		$this->show('job/job_detail');
