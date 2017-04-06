@@ -22,7 +22,7 @@ class Jobs extends MY_Controller {
 		if(!$this->input->post('title')){
 			$this->show_message('新闻标题不能为空!');
 		}
-		$rs =$this->job_model->save_news();
+		$rs =$this->job_model->save_job();
 		if($rs == 1){
 			$this->show_message('保存成功',site_url('jobs/list_job'));
 		}else{
