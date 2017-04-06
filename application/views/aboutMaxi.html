@@ -60,69 +60,20 @@
 				<div class="recruit show">
 					<div class="recruit-list">
 						<ul>
+							{{foreach from=$list.list item=item}}
 							<li>
-								<a href="/aboutMaxi/personDetails">
-									<span class="title overflow">我要招聘</span>
-									<span class="times">2017-12-12</span>
+								<a href="/aboutMaxi/personDetails/{{$item.id}}">
+									<span class="title overflow">{{$item.title}}</span>
+									<span class="times">{{$item.cdate}}</span>
 								</a>
 							</li>
-							<li>
-								<a href="/aboutMaxi/personDetails">
-									<span class="title overflow">我要招聘</span>
-									<span class="times">2017-12-12</span>
-								</a>
-							</li>
-							<li>
-								<a href="/aboutMaxi/personDetails">
-									<span class="title overflow">我要招聘</span>
-									<span class="times">2017-12-12</span>
-								</a>
-							</li>
-							<li>
-								<a href="/aboutMaxi/personDetails">
-									<span class="title overflow">我要招聘</span>
-									<span class="times">2017-12-12</span>
-								</a>
-							</li>
-							<li>
-								<a href="/aboutMaxi/personDetails">
-									<span class="title overflow">我要招聘</span>
-									<span class="times">2017-12-12</span>
-								</a>
-							</li>
-							<li>
-								<a href="/aboutMaxi/personDetails">
-									<span class="title overflow">我要招聘</span>
-									<span class="times">2017-12-12</span>
-								</a>
-							</li>
-							<li>
-								<a href="/aboutMaxi/personDetails">
-									<span class="title overflow">我要招聘</span>
-									<span class="times">2017-12-12</span>
-								</a>
-							</li>
-							<li>
-								<a href="/aboutMaxi/personDetails">
-									<span class="title overflow">我要招聘</span>
-									<span class="times">2017-12-12</span>
-								</a>
-							</li>
-							<li>
-								<a href="/aboutMaxi/personDetails">
-									<span class="title overflow">我要招聘</span>
-									<span class="times">2017-12-12</span>
-								</a>
-							</li>
-							<li>
-								<a href="/aboutMaxi/personDetails">
-									<span class="title overflow">我要招聘</span>
-									<span class="times">2017-12-12</span>
-								</a>
-							</li>
+							{{/foreach}}
 						</ul>
 					</div>	
-					<div class="tcdPageCode"></div>
+					<!--<div class="tcdPageCode"></div>-->
+					<div class="am-cf">
+						{{$pager}}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -139,7 +90,17 @@
 <!-- endbuild -->
 <script>
 	(function(){
-		$(".listItems li").eq(1).addClass("ItemsActive");
+		var flag = {{$flag}};
+		if(flag==1){
+			$(".leftItems").removeClass("leftActive");
+			$(".leftItems").eq(3).addClass("leftActive");
+			$(".addr").html("当前位置：关于淼溪>人才招聘");
+			$(".show").hide();
+			$(".recruit").show();
+		}else{
+			$(".leftItems").removeClass("leftActive");
+			$(".leftItems").eq(0).addClass("leftActive");
+		}
 		$(".leftItems").click(function() {
 			$(".leftItems").removeClass("leftActive");
 			$(this).addClass("leftActive");

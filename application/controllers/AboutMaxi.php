@@ -19,15 +19,37 @@ class AboutMaxi extends MY_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('jobs_model');
 	}
 
-	public function index()
+	public function index($page=null)
 	{
+		if($page){
+			$this->assign('flag', 1);
+		}else{
+			$this->assign('flag', -1);
+			$page=1;
+		}
+		$list = $this->jobs_model->get_list($page);
+		$pager = $this->pagination->getPageLink('/aboutMaxi/get_list', $list['total'], $list['limit']);
+		$this->assign('pager', $pager);
+		$this->assign('list',$list);//url路径
 		$this->display('aboutMaxi.html');
 	}
 
 	public function personDetails($id=null){
+		$detail = $this->jobs_model->get_detail($id);
+		$this->assign('detail',$detail);//url路径
 		$this->display('personDetails.html');
+	}
+
+	public function get_list($page=1){
+		$this->assign('flag', 1);
+		$list = $this->jobs_model->get_list($page);
+		$pager = $this->pagination->getPageLink('/aboutMaxi/get_list', $list['total'], $list['limit']);
+		$this->assign('pager', $pager);
+		$this->assign('list',$list);//url路径
+		$this->display('aboutMaxi.html');
 	}
 
 }
